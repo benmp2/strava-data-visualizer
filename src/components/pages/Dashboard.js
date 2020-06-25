@@ -19,7 +19,7 @@ export default function Dashboard() {
 
     };
 
-    async function getTokenForAuthScope (accessCode){
+    async function getAccessTokenAndRefresh (accessCode){
 
         const requestOptions = {
             method: 'POST',
@@ -54,49 +54,10 @@ export default function Dashboard() {
         const data_refresh = await res_ref.json();
         console.log("RESULT FROM REFRESHING TOKEN:",data_refresh);
         console.log('the refreshed token',data_refresh.access_token);
-
     };
-
-    // function refreshAccessToken(response){
-       
-    //     // console.log('response:' , response);
-    //     response.then(data => console.log(data));
-    //     const refreshToken = response.refresh_token;
-
-    //     console.log('inside refresh func, refresh token is: ')
-    //     console.log(refreshToken)
-
-    //     const requestOptions = {
-    //         method: 'POST',
-    //         headers: { 'Content-Type': 'application/json' },
-    //         body: JSON.stringify({'client_id' : clientId,
-    //                               'client_secret' : clientSecret,
-    //                               'refresh_token': refreshToken,
-    //                               'grant_type':'refresh_token' 
-    //                              })
-    //     }
-
-    //     const token_url = 'https://www.strava.com/oauth/token';
-
-    //     fetch(token_url, requestOptions)
-    //         .then(response => response.json())
-    //         .then(data => {
-    //             console.log("RESULT FROM REFRESHING TOKEN:")
-    //             console.log(data);
-    //             // newTokens.accessToken = data.access_token;
-    //             // newTokens.refreshToken = data.refresh_token;
-    //             // newTokens.expires_in = data.expires_in;
-    //         });
-        
-        
-    //     // console.log('INSIDE ',response.json())
-    //     // return response.json();        
-    // };
-
-
     const queryVariables = getQueryVariable();
     
-    getTokenForAuthScope(queryVariables.code);
+    getAccessTokenAndRefresh(queryVariables.code);
 
     // refreshAccessToken(getTokenForAuthScope(queryVariables.code));
 
@@ -111,7 +72,6 @@ export default function Dashboard() {
             <h1> Dashboard </h1>
             <h1> query string goes below:</h1>
             <h1>{queryVariables.code}</h1>
-            <h1>{queryVariables.scope}</h1>
             <h1>{queryVariables.scope}</h1>
         </div>
     )
