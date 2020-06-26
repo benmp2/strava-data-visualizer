@@ -1,4 +1,5 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
+const stravaApi = require('strava-v3');
 
 export default function Dashboard() {
     
@@ -54,10 +55,16 @@ export default function Dashboard() {
         const data_refresh = await res_ref.json();
         console.log("RESULT FROM REFRESHING TOKEN:",data_refresh);
         console.log('the refreshed token',data_refresh.access_token);
+
+        // strava = new stravaApi.client(data_refresh.access_token);
+        
+
     };
     const queryVariables = getQueryVariable();
     
     getAccessTokenAndRefresh(queryVariables.code);
+
+    
 
     // refreshAccessToken(getTokenForAuthScope(queryVariables.code));
 
