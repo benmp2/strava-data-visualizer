@@ -1,0 +1,8 @@
+.strava-button {
+    align-items: center;
+    justify-content: center;
+    min-height: 5vh;
+    display: flex;
+    flex-direction: column;
+    text-decoration:none; 
+}

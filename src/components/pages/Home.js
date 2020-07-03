@@ -1,11 +1,20 @@
 import React from 'react'
 import StravaAuthButton from '../auth/StravaAuthButton';
+import './Home.css';
 
-export default function Home() {
+function Home() {
     return (
-        <div>
-            <h1> HomePage </h1>
-            <StravaAuthButton/>
+        <div className="main_div" >
+            <div className="welcomeSign">
+                <h1> HomePage </h1>
+            </div>
+            <div className="stravaButton">
+                <StravaAuthButton/>
+            </div>
+            
         </div>
     )
 }
+
+
+export default Home;
