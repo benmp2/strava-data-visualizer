@@ -1,1 +1,0 @@
-# strava-data-visualizer
