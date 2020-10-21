@@ -1,3 +1,10 @@
+First project with react-js, currently just uses live-server js library to run. 
+This website allows you to login via your strava account (using oauth2 !) and display your strava sessions on a map.
+
+
+
+React boilerplate readme:
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
