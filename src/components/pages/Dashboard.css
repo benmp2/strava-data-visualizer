@@ -10,6 +10,8 @@
     color: white;
     /* margin-bottom: auto; */
     position:sticky;
+    height: 100%;
+    width: 100%;
   }
   
   /* .leafletmap {
