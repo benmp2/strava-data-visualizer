@@ -1,6 +1,6 @@
 import React,{useEffect, useRef } from 'react';
 import L from 'leaflet';
-
+import './LeafletMapChart.css'
 import 'leaflet/dist/leaflet.css';
 
 var polyUtil = require('polyline-encoded');
@@ -59,32 +59,9 @@ function LeafletMapChart(props) {
     
 
     return (
-        <div className="container">
-            {/* <Map className='first_map'
-                center={[47.5, 19.0]}
-                zoom={12}
-                // maxZoom={10}
-                attributionControl={true}
-                zoomControl={true}
-                doubleClickZoom={true}
-                scrollWheelZoom={true}
-                dragging={true}
-                animate={true}
-                easeLinearity={0.35}
-                style={{ height: "600px", width: "900px" }}
-            >
-                <TileLayer
-                    url={tilelayerURL}
-                />
-                {
-
-                }
-
-            </Map> */}
-            <div id="leafletmap" style={{ height: "600px", width: "900px" }} ></div>
-            <h1>temp</h1>
-            {/* <h1>{lines[0]}</h1> */}
-        </div>
+        //this also works without css:
+        // <div id="leafletmap" style={{ height: "100vh", width: "100vw" }} ></div>
+        <div id="leafletmap"></div>
     )
 };
 

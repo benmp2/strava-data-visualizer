@@ -114,7 +114,7 @@ export default function Dashboard() {
             .then(res => res.json())
             .then(data_act=> {
                 console.log('activities data:',data_act);
-                console.log('activities test data:',data_act[0].average_speed);
+                // console.log('activities test data:',data_act[0].average_speed);
                 SetChartData(data_act);
             })
 
@@ -142,7 +142,7 @@ export default function Dashboard() {
     return (
         <div className="leafletMain_div">
             {/* <h1></h1> */}
-            <h1> Dashboard </h1>
+            {/* <h1> Dashboard </h1> */}
             {/* <h1> query string goes below:</h1>
             <h1>{queryVariables.code}</h1>
             <h1>{queryVariables.scope}</h1>
@@ -154,7 +154,6 @@ export default function Dashboard() {
                 expires in: {tokenState_arr.expires_in} </h1>
             <h1 className='test'>The refreshed acces token is: {tokenState_arr.access_token}</h1> */}
             <LeafletMapChart dataObject={chartData}/>
-            <h1> 000 1</h1>
         </div>
     )
 }
