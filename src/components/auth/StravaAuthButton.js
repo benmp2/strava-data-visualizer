@@ -12,11 +12,11 @@ function StravaAuthButton() {
 
     return (
         <div>
-            <div> A simple button should go below </div>
+            <div> Sign in using your Strava account. </div>
             {/* <button bsSize="large" >Sign In With Strava</button> */}
             {/* <Button bsSize="large" block href={authUri}> Sign In With Strava</Button> */}
             <a className = "strava-button" href={authUri}>
-                <Button >Sign In With Strava</Button>
+                <Button >Sign in</Button>
             </a>
             
             
