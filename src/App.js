@@ -12,7 +12,6 @@ function App() {
   return (
       <Router>
         <div className="App">
-          <header> Strava authentication! </header>
            <div className="container">
             <Switch>
               <Route exact path="/" component={Home}/> 
