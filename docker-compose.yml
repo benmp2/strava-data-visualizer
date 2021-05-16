@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+  strava-visualizer-frontend:
+    image: strava-visualizer-app
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: production
+    ports:
+      - 3000:3000
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
