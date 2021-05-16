@@ -1,7 +1,10 @@
 First project with react-js, currently just uses live-server js library to run. 
 This website allows you to login via your strava account (using oauth2 !) and display your strava sessions on a map.
 
-
+## Run containerized project:
+* clone repo
+* cd strava-data-visualizer
+* docker-compose up
 
 React boilerplate readme:
 
