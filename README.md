@@ -6,6 +6,8 @@ This website allows you to login via your strava account (using oauth2 !) and di
 * cd strava-data-visualizer
 * docker-compose up
 
+<hr>
+
 React boilerplate readme:
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
